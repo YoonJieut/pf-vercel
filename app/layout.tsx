@@ -1,14 +1,34 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_KR, Koulen, Homemade_Apple } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// import Font Awesome CSS
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: "vercel 배포 테스트",
-  description: "vecel 배포 테스트",
+  title: "YoonJieut",
+  description:
+    "신입 프론트엔드 개발자 윤준현의 포트폴리오 사이트입니다. 이곳에서 제가 만든 프로젝트의 요약 정보를 확인하실 수 있습니다.",
 };
 
+const noto = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-noto",
+});
+const koulen = Koulen({
+  subsets: ["latin"], // 또는 preload: false
+  weight: "400",
+  variable: "--font-koulen",
+});
+const homemadeApple = Homemade_Apple({
+  // subsets: ["latin"],
+  preload: false, // 한 단어만 필요하니 preload: false
+  weight: "400",
+  variable: "--font-homemade",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,7 +36,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+      </head>
+      <body
+        className={`${noto.variable} ${koulen.variable} ${homemadeApple.variable} noto`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
