@@ -1,26 +1,43 @@
 {
-  "name": "nextjs",
+  "name": "yoonjieutblog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "nodemon-dev": "nodemon --exec ts-node server.ts",
     "dev": "next dev",
     "build": "next build",
+    "tsc-build": "tsc && next build",
+    "dev-start": "set NODE_ENV=production&& node dist/server.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ps-prestart": "powershell -Command \" $env:NODE_ENV='production' \"",
+    "cmd-prestart": "set NODE_ENV=production"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@svgr/webpack": "^8.1.0",
+    "dotenv": "^16.4.1",
+    "mysql": "^2.18.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "next": "14.2.4",
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "typescript": "^5",
+    "@types/express": "^4.17.21",
+    "@types/mysql": "^2.15.25",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2"
   }
 }
