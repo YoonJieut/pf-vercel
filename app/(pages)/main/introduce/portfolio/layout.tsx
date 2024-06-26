@@ -1,3 +1,5 @@
+"use client";
+
 import MenuComp from "@/app/components/MenuComp";
 import { useState } from "react";
 import PortfolioPage from "./page";
