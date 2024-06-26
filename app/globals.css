@@ -73,17 +73,6 @@ body {
   background: #1c1c1c; /* 호버 시 메인 색상으로 변경 */
   transition: background-color 0.3s; /* 배경색 변경 트랜지션 */
 }
-
-/* placeholder */
-
-/* input::placeholder {
-  background: transparent;
-  font-size: calc(100vw / 6);
-  text-align: left;
-  letter-spacing: -0.03em;
-  line-height: -0.5em;
-} */
-
 /* Firefox를 위한 스크롤바 스타일 */
 * {
   scrollbar-width: thin; /* 스크롤바 너비 설정 */
@@ -120,31 +109,12 @@ body {
   font-family: "Anta", sans-serif;
 }
 
-/* 궁서체 글씨 */
-/* .Imbue {
-  font-family: "Imbue", sans-serif;
-} */
 .imbue {
   font-family: var(--font-imbue);
 }
-
-/* .Oswald {
-  font-family: "Oswald", sans-serif;
-} */
-
-/* .Homemade-apple {
-  font-family: "Homemade Apple", cursive;
-  font-weight: 400;
-  font-style: normal;
-} */
 .homemadeApple {
   font-family: var(--font-homemade);
 }
-/* .Koulen {
-  font-family: "Koulen", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-} */
 .koulen {
   font-family: var(--font-koulen);
 }
