@@ -1,7 +1,5 @@
-import ChatNovelPage from "@/app/components/ChatNovelPage";
+import ChatnovelContent from "@/app/components/ui/Page/portfolio/chatnovel/ChatNovelContent";
 
-const ChatNovelContent = () => {
-  return <ChatNovelPage />;
-};
-
-export default ChatNovelContent;
+export default function ChatNovelPage() {
+  return <ChatnovelContent />;
+}

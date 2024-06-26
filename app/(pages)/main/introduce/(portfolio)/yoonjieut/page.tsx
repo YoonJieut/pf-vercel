@@ -1,7 +1,5 @@
-import YoonJieutPage from "@/app/components/YoonJieutPage";
+import YoonJieutContent from "@/app/components/ui/Page/portfolio/yoonjieut/YoonJieutContent";
 
-const YoonJieutContent = () => {
-  return <YoonJieutPage />;
-};
-
-export default YoonJieutContent;
+export default function YoonJieutPage() {
+  return <YoonJieutContent />;
+}

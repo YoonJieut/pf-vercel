@@ -1,7 +1,5 @@
-import ErpPage from "@/app/components/ErpPage";
+import ErpContent from "@/app/components/ui/Page/portfolio/erp/ErpContent";
 
-const ErpContent = () => {
-  return <ErpPage />;
-};
-
-export default ErpContent;
+export default function ErpPage() {
+  return <ErpContent />;
+}
