@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import portfolioMetaData from "@/app/_constants/portfolio/portfolioMessage";
-import urlParamMaker from "@/app/utils/urlParamMaker";
+import urlParamMaker from "@/app/_utils/urlParamMaker";
 
 /**
  * 현재 경로를 바탕으로 메뉴 네비게이션 정보를 제공하는 훅.
