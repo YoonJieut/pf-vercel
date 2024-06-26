@@ -20,7 +20,7 @@ export interface PortfolioMessage {
 const portfolioMessage: PortfolioMessage[] = [
   {
     name: "YoonJieut",
-    path: "http://localhost:3000/main/introduce/yoonjieut",
+    path: "https://pf-vercel-8b2b3xvwv-yoonjieuts-projects.vercel.app/main/introduce/yoonjieut",
     stack: ["TypeScript", "NEXT.JS", "EXPRESS", "MySQL", "Figma"],
     imgUrl: "/images/entry.png",
     introduce: {
@@ -34,7 +34,7 @@ const portfolioMessage: PortfolioMessage[] = [
   },
   {
     name: "ERP",
-    path: "http://localhost:3000/main/introduce/erp",
+    path: "https://pf-vercel-8b2b3xvwv-yoonjieuts-projects.vercel.app/main/introduce/erp",
     stack: ["TypeScript", "NEXT.JS", "EXPRESS", "MariaDB", "Figma", "Slack"],
     imgUrl: "/images/erp_sub.png",
     introduce: {
@@ -48,7 +48,7 @@ const portfolioMessage: PortfolioMessage[] = [
   },
   {
     name: "ChatNovel",
-    path: "http://localhost:3000/main/introduce/chatnovel",
+    path: "https://pf-vercel-8b2b3xvwv-yoonjieuts-projects.vercel.app/main/introduce/chatnovel",
     stack: ["JavaScript", "Express", "HTML", "CSS"],
     imgUrl: "/images/chat_main.png",
     introduce: {
