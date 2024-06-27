@@ -25,7 +25,9 @@ export default function PostsTable() {
       try {
         const response = await fetch("api/posts");
         if (!response.ok) {
-          throw new Error("Failed to fetch posts");
+          throw new Error(
+            "서버에서 데이터를 불러오는데 실패했습니다. - DB 서버가 꺼져있을 수 있습니다."
+          );
         }
         const data = await response.json();
         setPosts(data);
