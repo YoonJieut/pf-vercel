@@ -1,0 +1,25 @@
+name: Clean up old deployments
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" # 매주 일요일 자정에 실행
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Authenticate with Vercel
+        run: vercel login --token ${{ secrets.VERCEL_TOKEN }}
+
+      - name: List all deployments
+        run: vercel ls --token ${{ secrets.VERCEL_TOKEN }} > deployments.txt
+
+      - name: Parse and delete old deployments
+        run: |
+          old_deployments=$(tail -n +3 deployments.txt | head -n -2 | awk '{print $1}')
+          for deployment in $old_deployments; do
+            vercel rm $deployment --yes --token ${{ secrets.VERCEL_TOKEN }}
+          done
