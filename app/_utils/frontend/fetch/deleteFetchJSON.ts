@@ -1,4 +1,4 @@
-// 경로 : app/utils/frontend/deleteFetchJSON.ts
+// 경로 : app/_utils/frontend/deleteFetchJSON.ts
 // 이 파일은 클라이언트에서 지정된 엔드포인트에서 ID에 해당하는 데이터를 삭제하는 함수를 내보냅니다.
 
 /**

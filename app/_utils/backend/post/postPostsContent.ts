@@ -1,4 +1,4 @@
-// app/utils/backend/postPostsContent.ts
+// app/_utils/backend/postPostsContent.ts
 // 해당 코드는 게시물 내용을 등록하는 함수입니다.
 
 import dbQuery from "../../dbConnect";

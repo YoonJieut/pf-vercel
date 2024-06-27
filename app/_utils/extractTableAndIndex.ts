@@ -1,4 +1,4 @@
-//app/utils/extractTableAndIndex.ts
+//app/_utils/extractTableAndIndex.ts
 // URL에서 테이블 이름과 ID를 추출하는 함수입니다.
 
 /**

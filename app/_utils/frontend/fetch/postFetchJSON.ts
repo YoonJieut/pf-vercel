@@ -1,4 +1,4 @@
-// app/utils/postFetchJSON.ts
+// app/_utils/postFetchJSON.ts
 // 해당 코드는 fetch API를 사용하여 지정된 엔드포인트로 제공된 데이터와 함께 POST 요청을 보내는 함수입니다.
 
 // todo : 이 함수를 공용으로 쓸 수 있는 post로 바꾸는 역할로 바꿀 수 있을 것 같다.
