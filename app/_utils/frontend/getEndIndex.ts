@@ -1,4 +1,4 @@
-//app/utils/frontend/getEndIndex.ts
+//app/_utils/frontend/getEndIndex.ts
 // 목표 : 배열의 마지막 인덱스를 반환합니다.
 
 /**

@@ -1,4 +1,4 @@
-//app/utils/getTableIndexData.ts
+//app/_utils/getTableIndexData.ts
 // fetch
 
 import dbQuery from "../../dbConnect";
