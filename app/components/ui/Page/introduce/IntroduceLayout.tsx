@@ -1,9 +1,9 @@
 import Section from "@/app/components/ui/atom/Basic/Section";
 import DotLine from "@/app/components/ui/design/dotLine";
-import IntroImgCard from "@/app/components/ui/Molecules/ImgCard/IntroImgCard";
 import MainBanner from "@/app/components/ui/Molecules/Title/MainBanner";
 import WelcomePart from "@/app/components/ui/Molecules/etc/WelcomePart";
 import Link from "next/link";
+import IntroImgCard from "@/app/components/ui/Molecules/ImgCard/IntroImgCard";
 
 export default function IntroduceLayout() {
   return (

@@ -1,5 +1,5 @@
 "use client";
-// InteractiveClipPath.tsx
+
 import React, { useRef, useState, useEffect } from "react";
 import SvgAnimationController from "@/app/_services/SvgAnimationController";
 

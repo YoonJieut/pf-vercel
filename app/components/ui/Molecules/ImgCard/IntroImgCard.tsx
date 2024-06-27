@@ -3,8 +3,8 @@
 import React from "react";
 // import Image from "next/image";
 // import ImgUrl from "@/app/_constants/common/ImgUrl.json";
-import IntroduceMessage from "@/app/_constants/introduce/IntroduceMessage.json";
 import ClipPathAni from "@/app/components/animation/ClipPathAni";
+import IntroduceMessage from "@/app/_constants/introduce/IntroduceMessage.json";
 
 const IntroImgCard = () => {
   const formattedSub = IntroduceMessage.mainPage.introduceSub
