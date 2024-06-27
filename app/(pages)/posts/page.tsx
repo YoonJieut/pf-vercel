@@ -3,7 +3,6 @@
 
 "use client";
 import PostTitle from "@/app/components/ui/design/PostTitle";
-import PostsTable from "./@postsTable/page";
 // import { useState } from "react";
 
 // todo : 상호작용 이펙트 수정할 필요가 있어보임
@@ -15,13 +14,8 @@ export default function PostsPage(PostTable: any) {
   // };
 
   return (
-    <main className="postsMain w-full h-full flex justify-between bg-main overflow-hidden mb-[10px]">
-      <div className="w-5/12 ">
-        <PostTitle />
-      </div>
-      <div className="w-7/12 pt-5">
-        <PostsTable />
-      </div>
-    </main>
+    <>
+      <PostTitle />
+    </>
   );
 }

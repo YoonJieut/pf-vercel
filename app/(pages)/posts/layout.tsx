@@ -13,7 +13,10 @@ export default function RootLayout({
   return (
     <div className="postsRoot w-screen h-screen flex flex-col overflow-hidden pb-[10px]">
       <PostsHeader />
-      {children}
+      <main className="postsMain w-full h-full flex justify-between bg-main overflow-hidden mb-[10px]">
+        <div className="w-5/12 ">{children}</div>
+        <div className="w-7/12 pt-5">{postsTable}</div>
+      </main>
       <MainFooter />
     </div>
   );
