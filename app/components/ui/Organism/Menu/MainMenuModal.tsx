@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu } from "@/app/_interfaces/common/Menu";
+import UnderBarAni from "@/app/components/animation/UnderBarAni";
 
 const MainMenuModal = () => {
   const [menuItems, setMenuItems] = useState<Menu[]>([]);
@@ -19,9 +20,9 @@ const MainMenuModal = () => {
         <Link
           key={index}
           href={item.href}
-          className="block mb-3 font-main-1 hover: font-sub-1"
+          className="block mb-3 font-main-1 hover:text-slate-300 text-right"
         >
-          {item.name}
+          <UnderBarAni>{item.name}</UnderBarAni>
         </Link>
       ))}
     </div>
