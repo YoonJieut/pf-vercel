@@ -19,10 +19,13 @@ const MainFooter: React.FC = () => {
         <Link href="/main/introduce" className="block w-fit hover:underline">
           introduce
         </Link>
-        <Link href="/main/portfolio" className="block w-fit hover:underline">
+        <Link
+          href="/main/introduce/erp"
+          className="block w-fit hover:underline"
+        >
           portFolio
         </Link>
-        <Link href="/main/blog" className="block w-fit hover:underline">
+        <Link href="/posts" className="block w-fit hover:underline">
           posts
         </Link>
       </div>
