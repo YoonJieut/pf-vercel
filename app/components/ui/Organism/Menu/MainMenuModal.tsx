@@ -2,11 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
-interface Menu {
-  name: string;
-  href: string;
-}
+import { Menu } from "@/app/_interfaces/common/Menu";
 
 const MainMenuModal = () => {
   const [menuItems, setMenuItems] = useState<Menu[]>([]);
@@ -18,7 +14,7 @@ const MainMenuModal = () => {
   }, []);
 
   return (
-    <div className="fixed right-4 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-32 p-6 bg-var(--color-main-1) border-gray-300 shadow-lg rounded-lg">
+    <div className="fixed right-16 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-32 p-6 bg-var(--color-main-1) border-gray-300 shadow-lg rounded-lg">
       {menuItems.map((item, index) => (
         <Link
           key={index}
