@@ -1,11 +1,9 @@
 "use client";
 
 import { Menu } from "@/app/_interfaces/common/Menu";
-import { checkWordInArray } from "@/app/_utils/checkWordInArray";
 import fetchJSON from "@/app/_utils/frontend/fetch/fetchJSON";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import TipComp from "../etc/TipComp";
 
 const placeholders = ["Type here.", "Type here..", "Type here..."];
 const localMenuData: Menu[] = require("@/app/_constants/menu/menu.json");
@@ -62,25 +60,22 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
   return (
     <div className="w-full ml-10">
       <label htmlFor="customInput" title="주소 이동 입력창">
-        ㄹ
-        <TipComp message="가고 싶은 메뉴를 입력해주세요">
-          <input
-            id="customInput"
-            style={{
-              background: "transparent",
-              fontSize: "257px",
-              textAlign: "left",
-              letterSpacing: "-0.03em",
-              outline: "none",
-              padding: "0px",
-            }}
-            className="koulen w-3/4 font-sub-1"
-            placeholder={placeholders[currentPlaceholderIndex]}
-            onKeyPress={handleKeyPress}
-            onChange={(e) => setInputValue(e.target.value)}
-            autoFocus
-          />
-        </TipComp>
+        <input
+          id="customInput"
+          style={{
+            background: "transparent",
+            fontSize: "257px",
+            textAlign: "left",
+            letterSpacing: "-0.03em",
+            outline: "none",
+            padding: "0px",
+          }}
+          className="koulen w-3/4 font-sub-1"
+          placeholder={placeholders[currentPlaceholderIndex]}
+          onKeyPress={handleKeyPress}
+          onChange={(e) => setInputValue(e.target.value)}
+          autoFocus
+        />
       </label>
     </div>
   );
