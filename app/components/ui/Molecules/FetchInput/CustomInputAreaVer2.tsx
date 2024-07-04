@@ -60,9 +60,10 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
   };
 
   return (
-    <TipComp message="가고 싶은 메뉴를 입력해주세요">
-      <div className="w-full ml-10">
-        <label htmlFor="customInput" title="CustomInput">
+    <div className="w-full ml-10">
+      <label htmlFor="customInput" title="주소 이동 입력창">
+        ㄹ
+        <TipComp message="가고 싶은 메뉴를 입력해주세요">
           <input
             id="customInput"
             style={{
@@ -79,8 +80,8 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
             onChange={(e) => setInputValue(e.target.value)}
             autoFocus
           />
-        </label>
-      </div>
-    </TipComp>
+        </TipComp>
+      </label>
+    </div>
   );
 };

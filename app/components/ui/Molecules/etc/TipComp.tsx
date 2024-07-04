@@ -10,13 +10,13 @@ const TipComp = ({
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <div
-      className="relative flex flex-col items-center"
+      className="tipDiv relative flex flex-col items-center"
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
     >
       {children}
       {visible && (
-        <div className="absolute bottom-0 flex flex-col items-center mb-6 group-hover:flex">
+        <div className="absolute bottom-0 flex flex-col items-center mb-6 group-hover:flex z-100">
           <span className="relative z-10 p-2 text-xs leading-none text-slate-300 whitespace-no-wrap bg-main-1 shadow-lg rounded-md">
             {message}
           </span>
