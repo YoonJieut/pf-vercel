@@ -18,12 +18,12 @@ const MainMenuModal = () => {
   }, []);
 
   return (
-    <div className="fixed right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-64 p-6 bg-white border border-gray-300 shadow-lg rounded-lg">
+    <div className="fixed right-4 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-32 p-6 bg-var(--color-main-1) border-gray-300 shadow-lg rounded-lg">
       {menuItems.map((item, index) => (
         <Link
           key={index}
           href={item.href}
-          className="block mb-3 text-gray-700 hover:text-blue-500"
+          className="block mb-3 font-main-1 hover: font-sub-1"
         >
           {item.name}
         </Link>

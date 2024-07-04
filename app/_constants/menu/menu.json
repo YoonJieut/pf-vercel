@@ -1,8 +1,8 @@
 [
-  { "name": "main", "href": "/" },
-  { "name": "posts", "href": "/posts" },
-  { "name": "admin", "href": "/admin" },
-  { "name": "introduce", "href": "/introduce" },
-  { "name": "portfolio", "href": "/portfolio" },
-  { "name": "about me", "href": "/about-me" }
+  { "name": "Main", "href": "/main" },
+  { "name": "Introduce", "href": "/main/introduce" },
+  { "name": "Portfolio", "href": "/main/introduce/erp" },
+  { "name": "Admin", "href": "/admin" },
+  { "name": "Posts", "href": "/posts" },
+  { "name": "About me", "href": "/main/aboutme" }
 ]

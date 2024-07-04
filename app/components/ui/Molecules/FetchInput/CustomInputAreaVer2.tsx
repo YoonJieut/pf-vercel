@@ -1,11 +1,14 @@
 "use client";
 
+import { Menu } from "@/app/_interfaces/common/Menu";
 import { checkWordInArray } from "@/app/_utils/checkWordInArray";
 import fetchJSON from "@/app/_utils/frontend/fetch/fetchJSON";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const placeholders = ["Type here.", "Type here..", "Type here..."];
+
+const localMenuData: Menu[] = require("@/app/_constants/menu/menu.json");
 
 export const CustomInputAreaVer2 = (): JSX.Element => {
   const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0);
@@ -26,24 +29,33 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
     }, 700);
     // 언마운트 될 때 나오는 cleanup 함수
     return () => clearInterval(interval);
-  });
+  }, []);
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      // 페치로 배열가져오기
+      // 페치로 배열 가져오기
       fetchJSON("/api/cmdArray")
         .then((data) => {
-          if (checkWordInArray(inputValue, data)) {
-            // 관리자 명령어가 있는 경우
-            // todo : 보안적 측면으로 이 url이 나타나지 않는 형태로 한다.
-            moveToPage("/admin");
-          } else {
-            moveToPage("/mainTest");
-          }
+          handleInput(data);
         })
         .catch((error) => {
-          console.error(error);
+          console.error(
+            "데이터를 불러오는데 실패했습니다. Local Data를 활용합니다.",
+            error
+          );
+          handleInput(localMenuData);
         });
+    }
+  };
+
+  const handleInput = (data: Menu[]) => {
+    const menuItem = data.find(
+      (item) => item.name.toLowerCase() === inputValue.toLowerCase()
+    );
+    if (menuItem) {
+      moveToPage(menuItem.href);
+    } else {
+      moveToPage("/main");
     }
   };
 
