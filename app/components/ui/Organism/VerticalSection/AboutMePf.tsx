@@ -19,7 +19,7 @@ const AboutMePf: NextPage = () => {
           stack={item.stack}
           imgUrl={item.imgUrl}
           imgAlt={item.imgAlt}
-          content={item.introduce.content}
+          content={item.aboutme.content}
         />
       ))}
     </div>
