@@ -22,7 +22,7 @@ const MainMenuModal = () => {
           href={item.href}
           className="block mb-3 font-main-1 hover:text-slate-300 text-right"
         >
-          <UnderBarAni>{item.name}</UnderBarAni>
+          <UnderBarAni right={true}>{item.name}</UnderBarAni>
         </Link>
       ))}
     </div>
