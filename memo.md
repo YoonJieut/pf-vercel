@@ -2,7 +2,7 @@
 2. front 조립
 3. sub server 조립
    [완료]
-4. .env 기록 삭제
+4. .env 기록 삭제 [완료 - bfg repo cleaner 사용]
 
 할 일
 

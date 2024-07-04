@@ -1,4 +1,5 @@
 import { CustomInputAreaVer2 } from "./components/ui/Molecules/FetchInput/CustomInputAreaVer2";
+import MainMenuModal from "./components/ui/Organism/Menu/MainMenuModal";
 import EntryFont from "./components/ui/design/EntryFont";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <EntryFont />
         <CustomInputAreaVer2 />
       </div>
+      <MainMenuModal />
     </div>
   );
 }
