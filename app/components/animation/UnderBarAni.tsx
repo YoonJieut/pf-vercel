@@ -1,10 +1,13 @@
 // UnnderBarAni.tsx
 // children에 있는 길이에 맞춰 호버 했을 때, 언더바 애니메이션이 생성됩니다.
-
 "use client";
 
-import { useEffect, useRef } from "react";
 import { ChildrenProps } from "@/app/_interfaces/common/CommomProps";
+import { useEffect, useRef } from "react";
+
+interface UnderBarAniProps extends ChildrenProps {
+  right?: boolean;
+}
 
 // ? style-in-jsx를 활용하면 내부에 스타일 태그 생성 가능
 // 오늘은 이것을 활용해서 작업해본다.
@@ -22,25 +25,24 @@ import { ChildrenProps } from "@/app/_interfaces/common/CommomProps";
  * 하위 컴포넌트에 마우스 호버 시 밑줄 애니메이션을 적용하는 컴포넌트입니다.
  * span으로 이루어져 있습니다.
  *
- * @param {React.FC<ChildrenProps>} props - 하위 컴포넌트를 감싸는 컨테이너 컴포넌트에 전달되는 속성들입니다.
+ * @param {React.FC<UnderBarAniProps>} props - 하위 컴포넌트를 감싸는 컨테이너 컴포넌트에 전달되는 속성들입니다.
+ * @param {boolean} props.right - 오른쪽에 밑줄을 표시할지 여부를 결정하는 속성입니다.
  * @returns {React.ReactElement} - 밑줄 애니메이션을 적용한 컨테이너 컴포넌트를 반환합니다.
  * @example
  * ```tsx
- * "use client"
- * import React from 'react';
- * import UnderBarAni from './UnderBarAni';
- *
- * const ExampleComponent = () => {
- *   return (
  *     <UnderBarAni>
  *       Example Content
  *     </UnderBarAni>
- *   );
- * };
+ *     <UnderBarAni right={true}>
+ *       Example Content
+ *     </UnderBarAni>
  * ```
  */
 
-const UnderBarAni: React.FC<ChildrenProps> = ({ children }) => {
+const UnderBarAni: React.FC<UnderBarAniProps> = ({
+  children,
+  right = false,
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,14 +54,10 @@ const UnderBarAni: React.FC<ChildrenProps> = ({ children }) => {
       ] as HTMLElement;
 
       const handleMouseEnter = () => {
-        console.log("handleMouseEnter");
         underline.style.width = "100%";
-        console.log(underline.style.width);
       };
       const handleMouseLeave = () => {
-        console.log("handleMouseEnter");
         underline.style.width = "0";
-        console.log(underline.style.width);
       };
 
       container.addEventListener("mouseenter", handleMouseEnter);
@@ -74,11 +72,15 @@ const UnderBarAni: React.FC<ChildrenProps> = ({ children }) => {
 
   return (
     <span
-      className="UnderBarContainer relative pb-[2px] cursor-pointer w-fit"
+      className={`UnderBarContainer relative pb-[2px] cursor-pointer w-fit ${
+        right ? "underline-right" : ""
+      }`}
       ref={containerRef}
     >
       {children}
-      <span className="underlineAnimation bg-main-1"></span>
+      <span
+        className={`underlineAnimation bg-main-1 ${right ? "right" : ""}`}
+      ></span>
       <style jsx>{`
         .underlineAnimation {
           position: absolute;
@@ -88,8 +90,19 @@ const UnderBarAni: React.FC<ChildrenProps> = ({ children }) => {
           width: 0;
           transition: width 0.3s ease-in-out;
         }
+
+        .underline-right .underlineAnimation {
+          right: 0;
+          left: auto;
+        }
+
+        .underlineAnimation.right {
+          right: 0;
+          left: auto;
+        }
       `}</style>
     </span>
   );
 };
+
 export default UnderBarAni;

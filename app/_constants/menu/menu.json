@@ -1,0 +1,8 @@
+[
+  { "name": "Main", "href": "/main" },
+  { "name": "Introduce", "href": "/main/introduce" },
+  { "name": "Portfolio", "href": "/main/introduce/erp" },
+  { "name": "Admin", "href": "/admin" },
+  { "name": "Posts", "href": "/posts" },
+  { "name": "About me", "href": "/main/aboutme" }
+]

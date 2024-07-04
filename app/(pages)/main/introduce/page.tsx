@@ -9,7 +9,7 @@ export default function IntroducePage() {
   return (
     <main className="h-full w-full flex px-[100px] border border-sub-1 overflow-hidden">
       <Section className="leftIntro flex items-center w-1/2 h-full">
-        <Link href="/mainTest/aboutme">
+        <Link href="/main/aboutme">
           <Image
             src={"/images/kakao-talk-202402182120487351.png"}
             alt="웹 개발자 윤준현입니다."
