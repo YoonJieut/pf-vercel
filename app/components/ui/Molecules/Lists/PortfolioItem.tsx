@@ -23,7 +23,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   return (
     <Link href={path}>
       <div className="w-[21.063rem] flex flex-col items-start justify-start gap-[0.625rem]">
-        <div className="w-full h-[2.841rem] flex flex-col items-start justify-start gap-[0.313rem]">
+        <div className="w-full flex flex-col items-start justify-start gap-[0.313rem]">
           <b className="relative tracking-[-0.05em] leading-[101%]">{name}</b>
           <div className="relative text-[0.75rem] tracking-[-0.05em] leading-[114%] whitespace-pre-wrap">
             {content}
