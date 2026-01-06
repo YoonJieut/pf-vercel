@@ -33,7 +33,11 @@
 ## 주요 화면·데모 링크
 
 - 메인/포트폴리오/블로그 데모 URL: [ERP 프로젝트 포트폴리오 뷰](https://pf-vercel-snowy.vercel.app/main/introduce/erp)
+  <img width="1920" height="960" alt="image" src="https://github.com/user-attachments/assets/97dd0bc6-ad8b-4f4a-b3f3-8938852bce24" />
+
 - 관리자/포스트 관리 뷰 URL: [관리자 시점 포스즈 작성 뷰](https://pf-vercel-snowy.vercel.app/admin)
+  <img width="1920" height="958" alt="image" src="https://github.com/user-attachments/assets/cdad4e8f-e702-40f2-829d-63d142da51ee" />
+
 
 ## API·데이터 흐름
 
